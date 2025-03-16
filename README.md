@@ -60,9 +60,11 @@ The component sets dynamic metadata for better visibility on search engines:
 - **Open Graph Meta Tags** (for social sharing)
 - **JSON-LD Schema** (for structured data)
 
-## Example Screenshot
+## Demo
 
 ![QR Code Generator](https://toolteeno.com/assets/tools/qr_code_scanner.svg)
+https://toolteeno.com/qr-code-generator
+
 
 ## License
 
