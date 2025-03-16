@@ -1,0 +1,38 @@
+<div class="container infobox text-center">
+    <div class="d-flex align-items-center justify-content-center my-1">
+        <img src="../../../assets/tools/qr_code_scanner.svg" alt="QR Code Scanner Icon">
+        <h1 class="text-primary p-2">Generate Free QR Codes Instantly</h1>
+    </div>
+
+    <h2 class="text-secondary">Create Custom QR Codes for Websites, Businesses & More</h2>
+    <h2 class="text-secondary">Why Use a QR Code for Your Business?</h2>
+    <h2 class="text-secondary">How to Generate a QR Code?</h2>
+    
+    <h3 class="text-black-50">Step 1: Enter Your URL or Business Information</h3>
+    <h3 class="text-black-50">Step 2: Generate Your Custom QR Code</h3>
+    <h3 class="text-black-50">Step 3: Download or Print Your QR Code</h3>
+</div>
+
+
+<mat-card class="search-container">
+    <mat-form-field class="full-width">
+      <mat-label>Paste your link here to generate QR Code</mat-label>
+      <input matInput #searchInput type="text" [(ngModel)]="qrlink">
+    </mat-form-field>
+  
+    <button mat-button (click)="generate()"> Generate </button>
+</mat-card>
+
+
+<div *ngIf="qrlink" class="container text-center">
+
+    <div *ngIf="qrlink" class="qr-code-container">
+        <canvas #canvas></canvas>
+    </div>
+    
+    <!-- Download Button -->
+    <button *ngIf="qr_generated" mat-button color="accent" (click)="downloadQRCode()">
+        <mat-icon>download</mat-icon> Download QR Code
+    </button>
+
+</div>
